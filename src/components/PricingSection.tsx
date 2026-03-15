@@ -17,6 +17,7 @@ const plans = [
     volume: "20 m³",
     price: 95,
     popular: true,
+    image: boxMoyen as string | null,
     features: ["Rez-de-chaussée", "Accès 24h/24", "Parking attenant", "Idéal T2/T3"],
   },
   {
@@ -24,6 +25,7 @@ const plans = [
     surface: "15 m²",
     volume: "45 m³",
     price: 160,
+    image: boxGrand as string | null,
     features: ["Rez-de-chaussée", "Accès 24h/24", "Parking attenant", "Maison complète"],
   },
 ];
