@@ -20,20 +20,13 @@ const HeroSection = () => {
           Saint-Avold · Moselle
         </p>
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
-          La science du
+          Box de stockage
           <br />
-          <span className="text-gradient-orange">stockage sécurisé</span>
+          <span className="text-gradient-orange">à Louer</span>
         </h1>
         <p className="max-w-xl mx-auto text-muted-foreground text-lg mb-10 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
           Box en rez-de-chaussée avec accès direct 24h/7j à Saint-Avold
         </p>
-        <a
-          href="#calculateur"
-          className="inline-flex items-center gap-2 rounded-md bg-primary px-8 py-4 text-sm font-bold uppercase tracking-widest text-primary-foreground hover:opacity-90 transition-opacity glow-orange animate-fade-in-up"
-          style={{ animationDelay: "0.45s" }}
-        >
-          Calculer mon volume
-        </a>
       </div>
 
       {/* Bottom fade */}

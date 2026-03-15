@@ -1,10 +1,9 @@
-import { Camera, Clock, Car, ShieldAlert } from "lucide-react";
+import { Camera, Clock, Car } from "lucide-react";
 
 const features = [
   { icon: Camera, label: "Vidéosurveillance", desc: "Caméras HD 24h/24" },
   { icon: Clock, label: "Accès 24h/24", desc: "Badge personnel sécurisé" },
   { icon: Car, label: "Parking attenant", desc: "Accès direct au box" },
-  { icon: ShieldAlert, label: "Alarme", desc: "Système anti-intrusion" },
 ];
 
 const SecuritySection = () => {
@@ -23,7 +22,7 @@ const SecuritySection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
           {features.map(({ icon: Icon, label, desc }) => (
             <div
               key={label}
