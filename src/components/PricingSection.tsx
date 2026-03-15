@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { useState } from "react";
 import boxMoyen from "@/assets/box-moyen.jpg";
 import boxGrand from "@/assets/box-grand.jpg";
 
@@ -31,6 +32,8 @@ const plans = [
 ];
 
 const PricingSection = () => {
+  const [hoveredPlan, setHoveredPlan] = useState<string | null>(null);
+
   return (
     <section id="tarifs" className="py-20 md:py-28 bg-secondary/30">
       <div className="container px-4">
@@ -55,16 +58,13 @@ const PricingSection = () => {
                   ? "border-primary bg-card glow-orange"
                   : "border-border bg-card"
               }`}
+              onMouseEnter={() => plan.image && setHoveredPlan(plan.name)}
+              onMouseLeave={() => setHoveredPlan(null)}
             >
               {plan.popular && (
                 <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-[10px] font-bold uppercase tracking-widest text-primary-foreground">
                   Populaire
                 </span>
-              )}
-              {plan.image && (
-                <div className="rounded-md overflow-hidden mb-4 -mx-2 -mt-2">
-                  <img src={plan.image} alt={`Box ${plan.name}`} className="w-full h-36 object-cover" />
-                </div>
               )}
               <h3 className="text-lg font-bold mb-1">{plan.name}</h3>
               <p className="text-muted-foreground text-sm mb-4">
@@ -96,6 +96,22 @@ const PricingSection = () => {
           ))}
         </div>
       </div>
+
+      {/* Fullscreen image overlay on hover */}
+      {hoveredPlan && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 backdrop-blur-sm pointer-events-none">
+          <div className="max-w-3xl max-h-[80vh] rounded-lg overflow-hidden shadow-2xl">
+            <img
+              src={plans.find((p) => p.name === hoveredPlan)?.image || ""}
+              alt={`Box ${hoveredPlan}`}
+              className="w-full h-full object-contain"
+            />
+          </div>
+          <p className="absolute bottom-10 text-foreground text-sm font-semibold uppercase tracking-widest">
+            Box {hoveredPlan}
+          </p>
+        </div>
+      )}
     </section>
   );
 };
