@@ -22,7 +22,7 @@ const SecuritySection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
           {features.map(({ icon: Icon, label, desc }) => (
             <div
               key={label}
