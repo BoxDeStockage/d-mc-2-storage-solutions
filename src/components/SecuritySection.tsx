@@ -1,4 +1,4 @@
-import { Camera, Clock, Car, ShieldAlert } from "lucide-react";
+import { Camera, Clock, Car } from "lucide-react";
 
 const features = [
   { icon: Camera, label: "Vidéosurveillance", desc: "Caméras HD 24h/24" },
