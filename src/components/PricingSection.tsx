@@ -1,4 +1,6 @@
 import { Check } from "lucide-react";
+import boxMoyen from "@/assets/box-moyen.jpg";
+import boxGrand from "@/assets/box-grand.jpg";
 
 const plans = [
   {
@@ -6,6 +8,7 @@ const plans = [
     surface: "3 m²",
     volume: "9 m³",
     price: 55,
+    image: null as string | null,
     features: ["Rez-de-chaussée", "Accès 24h/24", "Parking attenant"],
   },
   {
@@ -14,6 +17,7 @@ const plans = [
     volume: "20 m³",
     price: 95,
     popular: true,
+    image: boxMoyen as string | null,
     features: ["Rez-de-chaussée", "Accès 24h/24", "Parking attenant", "Idéal T2/T3"],
   },
   {
@@ -21,6 +25,7 @@ const plans = [
     surface: "15 m²",
     volume: "45 m³",
     price: 160,
+    image: boxGrand as string | null,
     features: ["Rez-de-chaussée", "Accès 24h/24", "Parking attenant", "Maison complète"],
   },
 ];
@@ -56,12 +61,17 @@ const PricingSection = () => {
                   Populaire
                 </span>
               )}
+              {plan.image && (
+                <div className="rounded-md overflow-hidden mb-4 -mx-2 -mt-2">
+                  <img src={plan.image} alt={`Box ${plan.name}`} className="w-full h-36 object-cover" />
+                </div>
+              )}
               <h3 className="text-lg font-bold mb-1">{plan.name}</h3>
               <p className="text-muted-foreground text-sm mb-4">
                 {plan.surface} · {plan.volume}
               </p>
               <p className="text-4xl font-bold text-gradient-orange mb-1">
-                {plan.price}€
+                À partir de {plan.price}€
               </p>
               <p className="text-muted-foreground text-xs mb-6">/ mois HT</p>
               <ul className="space-y-2 mt-auto">

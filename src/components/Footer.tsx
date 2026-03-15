@@ -38,7 +38,7 @@ const Footer = () => {
           <div className="rounded-lg border border-border bg-card overflow-hidden min-h-[250px] flex items-center justify-center">
             <iframe
               title="Localisation D=mc²"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2620.0!2d6.712!3d49.104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDA2JzE0LjQiTiA2wrA0Mic0My4yIkU!5e0!3m2!1sfr!2sfr!4v1"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2620.0!2d6.7094!3d49.1043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4795a3b4c0c1f3e7%3A0x0!2s23+Rue+du+Brack%2C+57500+Saint-Avold!5e0!3m2!1sfr!2sfr!4v1"
               className="w-full h-full min-h-[250px] border-0 grayscale opacity-70"
               allowFullScreen
               loading="lazy"
