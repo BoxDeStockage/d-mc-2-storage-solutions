@@ -4,7 +4,6 @@ const features = [
   { icon: Camera, label: "Vidéosurveillance", desc: "Caméras HD 24h/24" },
   { icon: Clock, label: "Accès 24h/24", desc: "Badge personnel sécurisé" },
   { icon: Car, label: "Parking attenant", desc: "Accès direct au box" },
-  { icon: ShieldAlert, label: "Alarme", desc: "Système anti-intrusion" },
 ];
 
 const SecuritySection = () => {
