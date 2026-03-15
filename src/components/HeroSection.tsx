@@ -10,8 +10,7 @@ const HeroSection = () => {
           alt="Entrepôt de self-stockage moderne et sécurisé"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-background/80" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+        <div className="absolute inset-0 bg-background/60" />
       </div>
 
       {/* Content */}
