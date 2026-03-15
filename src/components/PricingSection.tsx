@@ -56,12 +56,17 @@ const PricingSection = () => {
                   Populaire
                 </span>
               )}
+              {plan.image && (
+                <div className="rounded-md overflow-hidden mb-4 -mx-2 -mt-2">
+                  <img src={plan.image} alt={`Box ${plan.name}`} className="w-full h-36 object-cover" />
+                </div>
+              )}
               <h3 className="text-lg font-bold mb-1">{plan.name}</h3>
               <p className="text-muted-foreground text-sm mb-4">
                 {plan.surface} · {plan.volume}
               </p>
               <p className="text-4xl font-bold text-gradient-orange mb-1">
-                {plan.price}€
+                À partir de {plan.price}€
               </p>
               <p className="text-muted-foreground text-xs mb-6">/ mois HT</p>
               <ul className="space-y-2 mt-auto">
