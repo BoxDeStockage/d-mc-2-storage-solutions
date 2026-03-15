@@ -1,4 +1,6 @@
 import { Check } from "lucide-react";
+import boxMoyen from "@/assets/box-moyen.jpg";
+import boxGrand from "@/assets/box-grand.jpg";
 
 const plans = [
   {
@@ -6,6 +8,7 @@ const plans = [
     surface: "3 m²",
     volume: "9 m³",
     price: 55,
+    image: null as string | null,
     features: ["Rez-de-chaussée", "Accès 24h/24", "Parking attenant"],
   },
   {
